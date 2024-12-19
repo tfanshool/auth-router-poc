@@ -5,8 +5,7 @@ export const AuthGuardLayout: React.FC = () => {
   const { isAuthenticated } = useAuth();
 
   return (
-    <div className="h-screen bg-red-800">
-      ssss
+    <div className="bg-red-800">
       {!isAuthenticated ? (
         <Navigate to="/login" />
       ) : (

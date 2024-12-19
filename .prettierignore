@@ -25,4 +25,7 @@ dist-ssr
 
 # Codebase
 
-pnpm-lock.yaml
+# Codebase
+
+# Tauri target folder
+src-tauri/target
