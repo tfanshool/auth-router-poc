@@ -3,15 +3,13 @@ import { Outlet } from 'react-router';
 import { WindowTitlebar } from 'tauri-controls';
 const AppShellLayout: React.FC = () => {
   return (
-    <main className="flex min-h-lvh flex-col">
-      <WindowTitlebar className="bg-primary-foreground">
+    <main className="min-h-lvh ">
+      {/* <WindowTitlebar className="bg-primary-foreground px-8 pt-2">
         <div className="flex gap-4">
-          <div>
             <AppWindow />
-          </div>
           <div>Sente Agilis</div>
         </div>
-      </WindowTitlebar>
+      </WindowTitlebar> */}
       <Outlet />
     </main>
   );

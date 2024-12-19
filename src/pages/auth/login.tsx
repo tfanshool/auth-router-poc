@@ -1,7 +1,7 @@
 import { Button } from '@/components/common/ui/button';
 import { Input } from '@/components/common/ui/input';
 import { Label } from '@/components/common/ui/label';
-import { cn } from '@/components/lib/utils';
+import { cn } from '@/libs/utils/utils';
 import { useAuth } from '@/state/contexts/AuthContext';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';

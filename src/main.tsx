@@ -28,11 +28,16 @@ createRoot(document.getElementById('root')!).render(
 
             {/* Protected Routes */}
             <Route element={<AuthGuardLayout />}>
-              <Route element={<DashboardLayout />}>
-                <Route path="/" element={<IndexPage />} />
+              <Route path="/" element={<DashboardLayout />}>
+                <Route index element={<IndexPage />} />
                 <Route path="move" element={<MoveItPage />} />
               </Route>
             </Route>
+
+            <Route path="/rrr" element={<DashboardLayout />}>
+                <Route index element={<IndexPage />} />
+                <Route path="move" element={<MoveItPage />} />
+              </Route>
           </Route>
         </Routes>
       </BrowserRouter>

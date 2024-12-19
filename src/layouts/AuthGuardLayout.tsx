@@ -5,14 +5,14 @@ export const AuthGuardLayout: React.FC = () => {
   const { isAuthenticated } = useAuth();
 
   return (
-    <div className="bg-red-800">
+    <>
       {!isAuthenticated ? (
         <Navigate to="/login" />
       ) : (
-        <div className="h-full bg-green-500">
+        <div className='h-screen w-screen'>
           <Outlet />
         </div>
       )}
-    </div>
+    </>
   );
 };

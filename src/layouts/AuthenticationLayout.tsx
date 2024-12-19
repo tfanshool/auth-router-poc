@@ -1,6 +1,17 @@
-import { Outlet } from 'react-router';
+import { Outlet, useNavigate } from 'react-router';
+import { useEffect } from 'react';
+import { useAuth } from '@/state/contexts/AuthContext';
 
 export const AuthenticationLayout: React.FC = () => {
+  const { isAuthenticated } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate('/');
+    }
+  }, [isAuthenticated, navigate]);
+
   return (
     <div className="grid flex-1 lg:grid-cols-2">
       <div className="flex flex-col gap-4 p-6 md:p-10">
