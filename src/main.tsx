@@ -35,9 +35,9 @@ createRoot(document.getElementById('root')!).render(
             </Route>
 
             <Route path="/rrr" element={<DashboardLayout />}>
-                <Route index element={<IndexPage />} />
-                <Route path="move" element={<MoveItPage />} />
-              </Route>
+              <Route index element={<IndexPage />} />
+              <Route path="move" element={<MoveItPage />} />
+            </Route>
           </Route>
         </Routes>
       </BrowserRouter>

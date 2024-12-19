@@ -16,6 +16,7 @@ import {
   SidebarMenuItem,
   useSidebar
 } from '@/components/common/ui/sidebar';
+import { useAuth } from '@/state/contexts/AuthContext';
 
 export function NavUser({
   user
@@ -27,7 +28,7 @@ export function NavUser({
   };
 }) {
   const { isMobile } = useSidebar();
-
+  const { clearAuth } = useAuth();
   return (
     <SidebarMenu>
       <SidebarMenuItem>
@@ -89,7 +90,7 @@ export function NavUser({
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuItem className="hover:cursor-pointer" onClick={clearAuth}>
               <LogOut />
               Log out
             </DropdownMenuItem>
