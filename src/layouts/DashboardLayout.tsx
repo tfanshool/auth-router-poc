@@ -15,7 +15,7 @@ export const DashboardLayout: React.FC = () => {
               data-tauri-drag-region
               className="border-1 flex h-8 items-center justify-end rounded-lg border border-transparent px-2"
             >
-              <WindowControls />
+              {/* <WindowControls /> */}
             </div>
           </div>
         </header>

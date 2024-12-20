@@ -13,7 +13,6 @@ import {
 } from 'lucide-react';
 
 import { NavMain } from '@/components/features/dashboard/nav-main';
-import { NavProjects } from '@/components/features/dashboard/nav-projects';
 import { NavSecondary } from '@/components/features/dashboard/nav-secondary';
 import { NavUser } from '@/components/features/dashboard/nav-user';
 import {
