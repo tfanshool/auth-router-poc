@@ -1,5 +1,17 @@
 import * as React from 'react';
-import { CircleUser, Command, HandHelping, HeartHandshake, House, LogOut, Monitor, RefreshCcw, RotateCcw, ScanBarcode, Settings, Truck } from 'lucide-react';
+import {
+  CircleUser,
+  Command,
+  HandHelping,
+  HeartHandshake,
+  House,
+  LogOut,
+  RefreshCcw,
+  RotateCcw,
+  ScanBarcode,
+  Settings,
+  Truck
+} from 'lucide-react';
 
 import { NavMain } from '@/components/features/dashboard/nav-main';
 import { NavSecondary } from '@/components/features/dashboard/nav-secondary';
@@ -58,31 +70,31 @@ const data = {
       title: 'Profile',
       url: '#',
       icon: CircleUser,
-      color : ""
+      color: ''
     },
     {
       title: 'Settings',
       url: '#',
       icon: Settings,
-      color : ""
+      color: ''
     },
     {
       title: 'Scanning Mode',
       url: '#',
       icon: ScanBarcode,
-      color : ""
+      color: ''
     },
     {
       title: 'Check for Update',
       url: '#',
       icon: RefreshCcw,
-      color : ""
+      color: ''
     },
     {
       title: 'Logout',
       url: '#',
       icon: LogOut,
-      color : ""
+      color: ''
     }
   ]
 };
