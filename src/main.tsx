@@ -1,6 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './assets/styles/index.css';
+import './assets/styles/icon.css';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import AppShellLayout from './layouts/AppShellLayout';
 import { AuthenticationLayout } from './layouts/AuthenticationLayout';
@@ -12,6 +13,8 @@ import MoveItPage from './pages/dashboard/move';
 import LoginPage from './pages/auth/login';
 import SignUpPage from './pages/auth/signup';
 import { AuthProvider } from './state/contexts/AuthProvider';
+import ProfilePage from './pages/actions/profile';
+import NotFoundPage from './pages/error/NotFoundPage';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -34,9 +37,15 @@ createRoot(document.getElementById('root')!).render(
               </Route>
             </Route>
 
-            <Route path="/rrr" element={<DashboardLayout />}>
+            <Route element={<DashboardLayout />}>
               <Route index element={<IndexPage />} />
               <Route path="move" element={<MoveItPage />} />
+              <Route path="profile" element={<ProfilePage />} />
+            </Route>
+            <Route element={<AuthGuardLayout />}>
+              <Route element={<DashboardLayout />}>
+                <Route path="*" element={<NotFoundPage />} />
+              </Route>
             </Route>
           </Route>
         </Routes>

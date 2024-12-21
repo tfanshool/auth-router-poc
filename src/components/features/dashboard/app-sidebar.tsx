@@ -68,13 +68,13 @@ const data = {
   navSecondary: [
     {
       title: 'Profile',
-      url: '#',
+      url: '/profile',
       icon: CircleUser,
       color: ''
     },
     {
       title: 'Settings',
-      url: '#',
+      url: '/sdfsdfsdf',
       icon: Settings,
       color: ''
     },
