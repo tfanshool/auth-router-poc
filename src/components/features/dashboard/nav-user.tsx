@@ -17,6 +17,18 @@ import {
   useSidebar
 } from '@/components/common/ui/sidebar';
 import { useAuth } from '@/state/contexts/AuthContext';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger
+} from '@/components/common/ui/alert-dialog';
+import { useState } from 'react';
 
 export function NavUser({
   user
@@ -29,6 +41,12 @@ export function NavUser({
 }) {
   const { isMobile } = useSidebar();
   const { clearAuth } = useAuth();
+  const [showModal, setShowModal] = useState(false);
+
+  const onHandleLogout = () => {
+    setShowModal(!showModal);
+  };
+
   return (
     <SidebarMenu>
       <SidebarMenuItem>
@@ -90,10 +108,27 @@ export function NavUser({
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem className="hover:cursor-pointer" onClick={clearAuth}>
-              <LogOut />
-              Log out
-            </DropdownMenuItem>
+            <AlertDialog open={showModal} onOpenChange={() => onHandleLogout()}>
+              <AlertDialogTrigger>
+                <div className='flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0'>
+                  <LogOut />
+                  Log out
+                </div>
+              </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                  <AlertDialogDescription>
+                    This action cannot be undone. This will permanently delete your account and
+                    remove your data from our servers.
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <AlertDialogCancel>Cancel</AlertDialogCancel>
+                  <AlertDialogAction onClick={clearAuth}>Continue</AlertDialogAction>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
           </DropdownMenuContent>
         </DropdownMenu>
       </SidebarMenuItem>

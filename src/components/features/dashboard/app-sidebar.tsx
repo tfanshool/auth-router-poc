@@ -1,16 +1,5 @@
 import * as React from 'react';
-import {
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  LifeBuoy,
-  Map,
-  PieChart,
-  Send,
-  Settings2,
-  SquareTerminal
-} from 'lucide-react';
+import { CircleUser, Command, HandHelping, HeartHandshake, House, LogOut, Monitor, RefreshCcw, RotateCcw, ScanBarcode, Settings, Truck } from 'lucide-react';
 
 import { NavMain } from '@/components/features/dashboard/nav-main';
 import { NavSecondary } from '@/components/features/dashboard/nav-secondary';
@@ -33,118 +22,67 @@ const data = {
   },
   navMain: [
     {
-      title: 'Playground',
-      url: '#',
-      icon: SquareTerminal,
+      title: 'Dashboard',
+      url: '/',
+      icon: House,
       isActive: true,
-      items: [
-        {
-          title: 'History',
-          url: '#'
-        },
-        {
-          title: 'Starred',
-          url: '#'
-        },
-        {
-          title: 'Settings',
-          url: '#'
-        }
-      ]
+      items: []
     },
     {
-      title: 'Models',
-      url: '#',
-      icon: Bot,
-      items: [
-        {
-          title: 'Genesis',
-          url: '#'
-        },
-        {
-          title: 'Explorer',
-          url: '#'
-        },
-        {
-          title: 'Quantum',
-          url: '#'
-        }
-      ]
+      title: 'Move It',
+      url: '/move',
+      icon: Truck,
+      items: []
     },
     {
-      title: 'Documentation',
+      title: 'Update It',
       url: '#',
-      icon: BookOpen,
-      items: [
-        {
-          title: 'Introduction',
-          url: '#'
-        },
-        {
-          title: 'Get Started',
-          url: '#'
-        },
-        {
-          title: 'Tutorials',
-          url: '#'
-        },
-        {
-          title: 'Changelog',
-          url: '#'
-        }
-      ]
+      icon: RotateCcw,
+      items: []
     },
     {
-      title: 'Settings',
+      title: 'Maintain It',
       url: '#',
-      icon: Settings2,
-      items: [
-        {
-          title: 'General',
-          url: '#'
-        },
-        {
-          title: 'Team',
-          url: '#'
-        },
-        {
-          title: 'Billing',
-          url: '#'
-        },
-        {
-          title: 'Limits',
-          url: '#'
-        }
-      ]
+      icon: HandHelping,
+      items: []
+    },
+    {
+      title: 'Support It',
+      url: '#',
+      icon: HeartHandshake,
+      items: []
     }
   ],
   navSecondary: [
     {
-      title: 'Support',
+      title: 'Profile',
       url: '#',
-      icon: LifeBuoy
+      icon: CircleUser,
+      color : ""
     },
     {
-      title: 'Feedback',
+      title: 'Settings',
       url: '#',
-      icon: Send
-    }
-  ],
-  projects: [
-    {
-      name: 'Design Engineering',
-      url: '#',
-      icon: Frame
+      icon: Settings,
+      color : ""
     },
     {
-      name: 'Sales & Marketing',
+      title: 'Scanning Mode',
       url: '#',
-      icon: PieChart
+      icon: ScanBarcode,
+      color : ""
     },
     {
-      name: 'Travel',
+      title: 'Check for Update',
       url: '#',
-      icon: Map
+      icon: RefreshCcw,
+      color : ""
+    },
+    {
+      title: 'Logout',
+      url: '#',
+      icon: LogOut,
+      color : ""
     }
   ]
 };
@@ -157,7 +95,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               <a href="#">
-                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary-foreground text-sidebar-primary">
                   <Command className="size-4" />
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
