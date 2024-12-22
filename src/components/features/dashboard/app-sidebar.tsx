@@ -74,13 +74,13 @@ const data = {
     },
     {
       title: 'Settings',
-      url: '/sdfsdfsdf',
+      url: '/profile',
       icon: Settings,
       color: ''
     },
     {
       title: 'Scanning Mode',
-      url: '#',
+      url: '/sdfsdf',
       icon: ScanBarcode,
       color: ''
     },

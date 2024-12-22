@@ -9,9 +9,7 @@ const NotFoundPage: React.FC = () => {
       <div className="mx-auto px-6 py-12 lg:flex lg:items-center lg:gap-12">
         <div className="w-full">
           <p className="text-sm font-medium text-destructive dark:text-blue-400">404 error</p>
-          <h1 className="mt-3 text-2xl font-semibold  md:text-3xl">
-            We lost this page
-          </h1>
+          <h1 className="mt-3 text-2xl font-semibold md:text-3xl">We lost this page</h1>
           <p className="mt-4 text-gray-500 dark:text-gray-400">
             Sorry, the page you are looking for doesn't exist.
           </p>
@@ -33,7 +31,7 @@ const NotFoundPage: React.FC = () => {
 
             <Link to="/">
               <Button>
-                <House strokeWidth={2.5}/>
+                <House strokeWidth={2.5} />
                 Homepage
               </Button>
             </Link>
