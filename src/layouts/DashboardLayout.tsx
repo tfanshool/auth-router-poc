@@ -4,10 +4,10 @@ import { AppSidebar } from '@/components/features/dashboard/app-sidebar';
 import WindowControls from '@/components/common/window-controls';
 export const DashboardLayout: React.FC = () => {
   return (
-    <SidebarProvider>
+    <SidebarProvider className="">
       <AppSidebar />
       <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2">
+        <header className="my-3 flex shrink-0 items-center gap-2">
           <div className="flex w-full items-center justify-between gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
             <div
@@ -18,7 +18,7 @@ export const DashboardLayout: React.FC = () => {
             </div>
           </div>
         </header>
-        <div className="flex flex-1 flex-col p-0 lg:p-4">
+        <div className="flex flex-1 flex-col p-0 pt-0 lg:p-4">
           <Outlet />
         </div>
       </SidebarInset>

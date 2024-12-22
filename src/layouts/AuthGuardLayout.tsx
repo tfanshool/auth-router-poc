@@ -9,7 +9,7 @@ export const AuthGuardLayout: React.FC = () => {
       {!isAuthenticated ? (
         <Navigate to="/login" />
       ) : (
-        <div className="h-screen w-screen">
+        <div className="flex h-screen w-screen">
           <Outlet />
         </div>
       )}

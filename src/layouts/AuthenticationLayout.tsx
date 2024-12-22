@@ -15,8 +15,8 @@ export const AuthenticationLayout: React.FC = () => {
 
   return (
     <div className="relative grid min-h-screen flex-1 lg:grid-cols-2">
-      <div className="flex flex-1 items-center justify-center">
-        <div className="w-full max-w-xs">
+      <div className="flex flex-col items-center justify-center">
+        <div className="flex w-full flex-1 grow flex-col items-center justify-center">
           <Outlet />
         </div>
       </div>

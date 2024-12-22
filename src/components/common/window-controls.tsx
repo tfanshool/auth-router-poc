@@ -43,17 +43,21 @@ const WindowControls: React.FC<WindowControlsProps> = ({ position = 'left', drag
       )}
       <div
         onClick={closeWindow}
-        className="flex size-4 items-center justify-center rounded-full bg-rose-500 text-rose-800"
+        className="flex size-5 items-center justify-center rounded-full bg-rose-500 p-0.5 text-rose-800"
       >
-        <X className="opacity-0 hover:cursor-pointer hover:opacity-100" strokeWidth={4} size={10} />
+        <X
+          className="opacity-0 hover:cursor-pointer hover:opacity-100"
+          strokeWidth={10}
+          size={10}
+        />
       </div>
       <div
         onClick={minimizeWindow}
-        className="flex size-4 items-center justify-center rounded-full bg-amber-500 text-amber-800"
+        className="flex size-5 items-center justify-center rounded-full bg-amber-500 p-0.5 text-amber-800"
       >
         <Minus
           className="opacity-0 hover:cursor-pointer hover:opacity-100"
-          strokeWidth={4}
+          strokeWidth={10}
           size={10}
         />
       </div>
@@ -61,11 +65,11 @@ const WindowControls: React.FC<WindowControlsProps> = ({ position = 'left', drag
       <div
         data-tauri-drag-region
         onClick={maximizeWindow}
-        className="flex size-4 items-center justify-center rounded-full bg-teal-500 text-teal-800"
+        className="flex size-5 items-center justify-center rounded-full bg-teal-500 p-0.5 text-teal-900"
       >
         <ChevronsLeftRight
           className="-rotate-45 opacity-0 hover:cursor-pointer hover:opacity-100"
-          strokeWidth={4}
+          strokeWidth={10}
           size={10}
         />
       </div>

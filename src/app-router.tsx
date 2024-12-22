@@ -20,12 +20,18 @@ const AppRoutes: FC = () => {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<AppShellLayout />}>
+          {/* Public Routes */}
           <Route element={<PublicGuardLayout />}>
             <Route path="/" element={<AuthenticationLayout />}>
               <Route
                 path="/login"
                 element={
-                  <PageWrapper>
+                  <PageWrapper
+                    showPageTitle={false}
+                    showBack={false}
+                    transparentBackgorund={true}
+                    pageTitle=""
+                  >
                     <LoginPage />
                   </PageWrapper>
                 }
@@ -33,7 +39,12 @@ const AppRoutes: FC = () => {
               <Route
                 path="/signup"
                 element={
-                  <PageWrapper>
+                  <PageWrapper
+                    showPageTitle={false}
+                    showBack={false}
+                    transparentBackgorund={true}
+                    pageTitle=""
+                  >
                     <SignUpPage />
                   </PageWrapper>
                 }
@@ -47,7 +58,12 @@ const AppRoutes: FC = () => {
               <Route
                 index
                 element={
-                  <PageWrapper>
+                  <PageWrapper
+                    showPageTitle={true}
+                    showBack={false}
+                    transparentBackgorund={true}
+                    pageTitle="Dashboard"
+                  >
                     <IndexPage />
                   </PageWrapper>
                 }
@@ -55,7 +71,12 @@ const AppRoutes: FC = () => {
               <Route
                 path="move"
                 element={
-                  <PageWrapper>
+                  <PageWrapper
+                    showPageTitle={true}
+                    showBack={true}
+                    transparentBackgorund={true}
+                    pageTitle="Move It"
+                  >
                     <MoveItPage />
                   </PageWrapper>
                 }
@@ -63,7 +84,12 @@ const AppRoutes: FC = () => {
               <Route
                 path="profile"
                 element={
-                  <PageWrapper>
+                  <PageWrapper
+                    showPageTitle={true}
+                    showBack={true}
+                    transparentBackgorund={true}
+                    pageTitle="Profile"
+                  >
                     <ProfilePage />
                   </PageWrapper>
                 }
@@ -71,7 +97,12 @@ const AppRoutes: FC = () => {
               <Route
                 path="*"
                 element={
-                  <PageWrapper>
+                  <PageWrapper
+                    showPageTitle={false}
+                    showBack={false}
+                    transparentBackgorund={true}
+                    pageTitle=""
+                  >
                     <NotFoundPage />
                   </PageWrapper>
                 }
