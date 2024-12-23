@@ -14,10 +14,10 @@ const PageWrapper = (props: LayoutProps) => {
   const navigate = useNavigate();
   return (
     <motion.div
-      initial={{ opacity: 0, y: 0, filter: 'blur(5px)', scale: 0.99 }}
+      initial={{ opacity: 0, y: 0, filter: 'blur(3px)', scale: 1 }}
       animate={{ opacity: 1, y: 0, filter: 'blur(0px)', scale: 1 }}
-      exit={{ opacity: 0, y: 0, filter: 'blur(5px)', scale: 0.99 }}
-      transition={{ duration: 0.2, ease: 'easeInOut' }}
+      exit={{ opacity: 0, y: 0, filter: 'blur(3px)', scale: 1 }}
+      transition={{ duration: 0.3, ease: 'easeInOut' }}
       className={cn(
         'flex grow flex-col overflow-auto md:p-3 lg:rounded-lg',
         !props.transparentBackgorund && 'bg-muted shadow-lg'
@@ -40,7 +40,7 @@ const PageWrapper = (props: LayoutProps) => {
             </Link>
           )}
           {props.showPageTitle && (
-            <h1 className="font-Bricolage text-3xl font-bold sm:text-4xl lg:text-5xl">
+            <h1 className="font-Bricolage lg:mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
               {props.pageTitle}
             </h1>
           )}

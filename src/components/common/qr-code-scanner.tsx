@@ -10,7 +10,7 @@ const QRCodeScanner: React.FC = () => {
   return (
     <div className="size-72">
       <Scanner
-        paused={false}
+        paused={true}
         allowMultiple={false}
         scanDelay={1000}
         onScan={(result) => handleOnClick(result)}
