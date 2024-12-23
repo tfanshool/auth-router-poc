@@ -6,7 +6,6 @@ import {
   Command,
   HandHelping,
   House,
-  LogOut,
   RefreshCcw,
   RotateCcw,
   Scale,
@@ -30,9 +29,10 @@ import {
 
 const data = {
   user: {
-    name: 'shadcn',
-    email: 'm@example.com',
-    avatar: '/avatars/shadcn.jpg'
+    name: 'Anshul Paliwal',
+    email: 'anshul@rust.com',
+    avatar:
+      'https://images.pexels.com/photos/13094366/pexels-photo-13094366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   },
   navMain: [
     {
@@ -80,12 +80,12 @@ const data = {
     }
   ],
   navSecondary: [
-    {
-      title: 'Profile',
-      url: '/action/profile',
-      icon: CircleUser,
-      color: ''
-    },
+    // {
+    //   title: 'Profile',
+    //   url: '/action/profile',
+    //   icon: CircleUser,
+    //   color: ''
+    // },
     {
       title: 'Settings',
       url: '/action/setting',
@@ -102,12 +102,6 @@ const data = {
       title: 'Check for Update',
       url: '/action/check-update',
       icon: RefreshCcw,
-      color: ''
-    },
-    {
-      title: 'Logout',
-      url: '#',
-      icon: LogOut,
       color: ''
     }
   ]
