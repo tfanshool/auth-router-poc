@@ -40,7 +40,7 @@ const PageWrapper = (props: LayoutProps) => {
             </Link>
           )}
           {props.showPageTitle && (
-            <h1 className="font-Bricolage lg:mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
+            <h1 className="font-Bricolage text-3xl font-bold sm:text-4xl lg:mb-4 lg:text-5xl">
               {props.pageTitle}
             </h1>
           )}

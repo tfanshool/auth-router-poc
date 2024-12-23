@@ -5,7 +5,6 @@ import {
   Cog,
   Command,
   HandHelping,
-  HeartHandshake,
   House,
   LogOut,
   RefreshCcw,
