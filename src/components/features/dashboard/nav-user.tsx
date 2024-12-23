@@ -1,6 +1,17 @@
-import { BadgeCheck, Bell, ChevronsUpDown, CreditCard, LogOut, Sparkles } from 'lucide-react';
+import {
+  BadgeCheck,
+  Bell,
+  ChevronsUpDown,
+  CreditCard,
+  LogOut,
+  Sparkles
+} from 'lucide-react';
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/common/ui/avatar';
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage
+} from '@/components/common/ui/avatar';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -119,13 +130,15 @@ export function NavUser({
                 <AlertDialogHeader>
                   <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
                   <AlertDialogDescription>
-                    This action cannot be undone. This will permanently delete your account and
-                    remove your data from our servers.
+                    This action cannot be undone. This will permanently delete
+                    your account and remove your data from our servers.
                   </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
                   <AlertDialogCancel>Cancel</AlertDialogCancel>
-                  <AlertDialogAction onClick={clearAuth}>Continue</AlertDialogAction>
+                  <AlertDialogAction onClick={clearAuth}>
+                    Continue
+                  </AlertDialogAction>
                 </AlertDialogFooter>
               </AlertDialogContent>
             </AlertDialog>

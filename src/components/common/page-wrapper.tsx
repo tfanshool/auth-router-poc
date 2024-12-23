@@ -33,10 +33,17 @@ const PageWrapper = (props: LayoutProps) => {
                 navigate(-1);
               }}
             >
-              <ArrowLeftCircle size={25} className="mt-1 cursor-pointer" />
+              <ArrowLeftCircle
+                size={25}
+                className="mt-0 cursor-pointer md:mt-0.5 lg:mt-1"
+              />
             </Link>
           )}
-          {props.showPageTitle && <h1 className="text-5xl font-bold">{props.pageTitle}</h1>}
+          {props.showPageTitle && (
+            <h1 className="font-Bricolage text-3xl font-bold sm:text-4xl lg:text-5xl">
+              {props.pageTitle}
+            </h1>
+          )}
         </div>
       )}
       <div className="flex h-96 grow flex-col overflow-x-hidden overflow-y-hidden">

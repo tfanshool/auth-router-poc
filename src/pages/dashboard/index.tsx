@@ -1,8 +1,55 @@
+import AppTileComponent from '@/components/features/dashboard/app-tile';
+
+const cards = [
+  {
+    title: 'Move It',
+    imageSrc:
+      'https://images.pexels.com/photos/17407385/pexels-photo-17407385/free-photo-of-cute-pomeranian-puppy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    link: '/nature'
+  },
+  {
+    title: 'Use It',
+    imageSrc:
+      'https://images.pexels.com/photos/17407385/pexels-photo-17407385/free-photo-of-cute-pomeranian-puppy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    link: '/city'
+  },
+  {
+    title: 'Update It',
+    imageSrc:
+      'https://images.pexels.com/photos/17407385/pexels-photo-17407385/free-photo-of-cute-pomeranian-puppy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    link: '/food'
+  },
+  {
+    title: 'Schedule It',
+    imageSrc:
+      'https://images.pexels.com/photos/17407385/pexels-photo-17407385/free-photo-of-cute-pomeranian-puppy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    link: '/food'
+  },
+  {
+    title: 'Support It',
+    imageSrc:
+      'https://images.pexels.com/photos/17407385/pexels-photo-17407385/free-photo-of-cute-pomeranian-puppy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    link: '/food'
+  },
+  {
+    title: 'Maintain It',
+    imageSrc:
+      'https://images.pexels.com/photos/17407385/pexels-photo-17407385/free-photo-of-cute-pomeranian-puppy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    link: '/food'
+  }
+];
+
 const IndexPage: React.FC = () => {
   return (
-    <div>
-      <h1>Hello, world!</h1>
-      <p>This is a simple React functional component.</p>
+    <div className="gird-cols-1 grid gap-4 overflow-y-auto overflow-x-hidden lg:grid-cols-2 2xl:grid-cols-3">
+      {cards.map((card, index) => (
+        <AppTileComponent
+          key={index}
+          title={card.title}
+          imageSrc={card.imageSrc}
+          link={card.link}
+        />
+      ))}
     </div>
   );
 };

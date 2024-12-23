@@ -1,6 +1,8 @@
 import * as React from 'react';
 import {
+  Calendar,
   CircleUser,
+  Cog,
   Command,
   HandHelping,
   HeartHandshake,
@@ -8,6 +10,7 @@ import {
   LogOut,
   RefreshCcw,
   RotateCcw,
+  Scale,
   ScanBarcode,
   Settings,
   Truck
@@ -41,27 +44,39 @@ const data = {
       items: []
     },
     {
-      title: 'Move It',
+      title: 'Move',
       url: '/move',
       icon: Truck,
       items: []
     },
     {
-      title: 'Update It',
+      title: 'Use',
+      url: '#',
+      icon: Cog,
+      items: []
+    },
+    {
+      title: 'Update',
       url: '#',
       icon: RotateCcw,
       items: []
     },
     {
-      title: 'Maintain It',
+      title: 'Schedule',
+      url: '#',
+      icon: Calendar,
+      items: []
+    },
+    {
+      title: 'Support',
       url: '#',
       icon: HandHelping,
       items: []
     },
     {
-      title: 'Support It',
+      title: 'Maintain',
       url: '#',
-      icon: HeartHandshake,
+      icon: Scale,
       items: []
     }
   ],

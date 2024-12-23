@@ -7,7 +7,9 @@ interface AuthProviderProps {
 }
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
-  const [token, setToken] = useState<string | null>(localStorage.getItem('token') || null);
+  const [token, setToken] = useState<string | null>(
+    localStorage.getItem('token') || null
+  );
   const [user, setUser] = useState<UserDetails | null>(null);
   const isAuthenticated = !!token;
 
@@ -24,7 +26,9 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ token, isAuthenticated, user, setAuth, clearAuth }}>
+    <AuthContext.Provider
+      value={{ token, isAuthenticated, user, setAuth, clearAuth }}
+    >
       {children}
     </AuthContext.Provider>
   );

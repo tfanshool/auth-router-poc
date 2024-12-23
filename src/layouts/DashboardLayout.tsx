@@ -1,7 +1,12 @@
 import { Outlet } from 'react-router';
-import { SidebarInset, SidebarProvider, SidebarTrigger } from '@/components/common/ui/sidebar';
+import {
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger
+} from '@/components/common/ui/sidebar';
 import { AppSidebar } from '@/components/features/dashboard/app-sidebar';
 import WindowControls from '@/components/common/window-controls';
+import { ModeToggle } from '@/components/common/mode-toggle';
 export const DashboardLayout: React.FC = () => {
   return (
     <SidebarProvider className="">
@@ -12,13 +17,14 @@ export const DashboardLayout: React.FC = () => {
             <SidebarTrigger className="-ml-1" />
             <div
               data-tauri-drag-region
-              className="border-1 flex h-8 items-center justify-end rounded-lg border border-transparent px-2"
+              className="border-1 flex h-8 items-center justify-end gap-2 rounded-lg border border-transparent px-2"
             >
+              <ModeToggle />
               <WindowControls />
             </div>
           </div>
         </header>
-        <div className="flex flex-1 flex-col p-0 pt-0 lg:p-4">
+        <div className="flex flex-1 flex-col p-2 pt-0 lg:p-4">
           <Outlet />
         </div>
       </SidebarInset>
