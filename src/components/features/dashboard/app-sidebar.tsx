@@ -95,7 +95,7 @@ const data = {
     },
     {
       title: 'Scanning Mode',
-      url: '/sdfsdf',
+      url: '/scanner',
       icon: ScanBarcode,
       color: ''
     },

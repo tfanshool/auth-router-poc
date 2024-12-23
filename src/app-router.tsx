@@ -13,6 +13,7 @@ import { FC } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import PageWrapper from './components/common/page-wrapper';
 import ProfilePage from './pages/dashboard/profile';
+import QRCodePage from './pages/dashboard/qr-code';
 
 const AppRoutes: FC = () => {
   const location = useLocation();
@@ -91,6 +92,19 @@ const AppRoutes: FC = () => {
                     pageTitle="Profile"
                   >
                     <ProfilePage />
+                  </PageWrapper>
+                }
+              />
+              <Route
+                path="scanner"
+                element={
+                  <PageWrapper
+                    showPageTitle={true}
+                    showBack={true}
+                    transparentBackgorund={true}
+                    pageTitle="Scanner"
+                  >
+                    <QRCodePage />
                   </PageWrapper>
                 }
               />
