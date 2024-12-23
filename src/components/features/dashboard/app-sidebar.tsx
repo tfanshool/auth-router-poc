@@ -51,31 +51,31 @@ const data = {
     },
     {
       title: 'Use',
-      url: '#',
+      url: '/use',
       icon: Cog,
       items: []
     },
     {
       title: 'Update',
-      url: '#',
+      url: '/update',
       icon: RotateCcw,
       items: []
     },
     {
       title: 'Schedule',
-      url: '#',
+      url: '/schedule',
       icon: Calendar,
       items: []
     },
     {
       title: 'Support',
-      url: '#',
+      url: '/support',
       icon: HandHelping,
       items: []
     },
     {
       title: 'Maintain',
-      url: '#',
+      url: '/maintain',
       icon: Scale,
       items: []
     }
@@ -83,25 +83,25 @@ const data = {
   navSecondary: [
     {
       title: 'Profile',
-      url: '/profile',
+      url: '/action/profile',
       icon: CircleUser,
       color: ''
     },
     {
       title: 'Settings',
-      url: '/profile',
+      url: '/action/setting',
       icon: Settings,
       color: ''
     },
     {
       title: 'Scanning Mode',
-      url: '/scanner',
+      url: '/action/scanner',
       icon: ScanBarcode,
       color: ''
     },
     {
       title: 'Check for Update',
-      url: '#',
+      url: '/action/check-update',
       icon: RefreshCcw,
       color: ''
     },

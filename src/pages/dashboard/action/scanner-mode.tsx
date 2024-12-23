@@ -1,7 +1,7 @@
 import QRCodeScanner from '@/components/common/qr-code-scanner';
 import React from 'react';
 
-const QRCodePage: React.FC = () => {
+const ScannerModePage: React.FC = () => {
     return (
         <div className='grid h-full grid-cols-2 gap-4 overflow-y-auto overflow-x-hidden'>
             <QRCodeScanner/>
@@ -9,4 +9,4 @@ const QRCodePage: React.FC = () => {
     );
 };
 
-export default QRCodePage;
+export default ScannerModePage;

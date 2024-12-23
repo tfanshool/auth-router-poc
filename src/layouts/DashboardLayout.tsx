@@ -24,7 +24,7 @@ export const DashboardLayout: React.FC = () => {
             </div>
           </div>
         </header>
-        <div className="flex flex-1 flex-col p-2 pt-0 lg:p-4">
+        <div className="flex flex-1 flex-col p-2 pt-0 lg:p-4 lg:pt-0">
           <Outlet />
         </div>
       </SidebarInset>
