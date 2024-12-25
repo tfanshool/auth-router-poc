@@ -99,6 +99,12 @@ const data = {
       color: ''
     },
     {
+      title: 'Scanning Mode v2',
+      url: '/action/scanner/v2',
+      icon: ScanBarcode,
+      color: ''
+    },
+    {
       title: 'Check for Update',
       url: '/action/check-update',
       icon: RefreshCcw,

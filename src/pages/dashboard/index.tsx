@@ -41,7 +41,7 @@ const cards = [
 
 const IndexPage: React.FC = () => {
   return (
-    <div className="gird-cols-2  grid gap-4 overflow-y-auto overflow-x-hidden md:grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3">
+    <div className="gird-cols-2 grid gap-4 overflow-y-auto overflow-x-hidden sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3">
       {cards.map((card, index) => (
         <AppTileComponent
           key={index}

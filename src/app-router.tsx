@@ -21,6 +21,7 @@ import UpdateItPage from './pages/dashboard/menu/update';
 import UseItPage from './pages/dashboard/menu/use';
 import SettingsPage from './pages/dashboard/action/setting';
 import CheckUpdatePage from './pages/dashboard/action/check-update';
+import ScannerPlaygroundPage from './pages/dashboard/action/scanner_playground';
 
 const AppRoutes: FC = () => {
   const location = useLocation();
@@ -186,6 +187,19 @@ const AppRoutes: FC = () => {
                       pageTitle="Scanner"
                     >
                       <ScannerModePage />
+                    </PageWrapper>
+                  }
+                />
+                <Route
+                  path="scanner/v2"
+                  element={
+                    <PageWrapper
+                      showPageTitle={true}
+                      showBack={false}
+                      transparentBackgorund={true}
+                      pageTitle="Scanner v2"
+                    >
+                      <ScannerPlaygroundPage />
                     </PageWrapper>
                   }
                 />

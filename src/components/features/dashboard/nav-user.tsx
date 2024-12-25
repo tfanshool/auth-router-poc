@@ -32,7 +32,7 @@ export function NavUser({
               <AvatarFallback className="rounded-lg">AP</AvatarFallback>
             </Avatar>
             <div className="grid flex-1 text-left text-sm leading-tight">
-              <span className="font-Bricolage truncate">{user.name}</span>
+              <span className="truncate font-Bricolage">{user.name}</span>
               <span className="truncate font-mono text-xs">{user.email}</span>
             </div>
           </SidebarMenuButton>

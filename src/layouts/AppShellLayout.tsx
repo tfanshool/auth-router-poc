@@ -4,7 +4,9 @@ import { ThemeProvider } from '@/components/common/theme-provider';
 import { cn } from '@/libs/utils/utils';
 const AppShellLayout: React.FC = () => {
   return (
-    <main className={cn('min-h-lvh select-none')}>
+    <main
+      className={cn('min-h-lvh select-none transition-colors duration-500')}
+    >
       <TooltipProvider>
         <ThemeProvider>
           <Outlet />
