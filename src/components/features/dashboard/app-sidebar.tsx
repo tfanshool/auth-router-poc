@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {
   Calendar,
-  CircleUser,
   Cog,
   Command,
   HandHelping,

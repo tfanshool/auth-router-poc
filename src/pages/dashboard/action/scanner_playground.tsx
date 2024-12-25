@@ -1,8 +1,6 @@
 import {
   Alert,
-  AlertDescription,
-  AlertTitle
-} from '@/components/common/ui/alert';
+  AlertDescription} from '@/components/common/ui/alert';
 import { Button } from '@/components/common/ui/button';
 import {
   Card,
@@ -20,7 +18,7 @@ import {
 } from '@/components/common/ui/select';
 import { cn } from '@/libs/utils/utils';
 import { IDetectedBarcode, Scanner } from '@yudiel/react-qr-scanner';
-import { Ban, Info, Pause, PlayIcon, QrCode, Terminal } from 'lucide-react';
+import { Info, Pause, PlayIcon, QrCode } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 interface ScanResult {
   value: string;

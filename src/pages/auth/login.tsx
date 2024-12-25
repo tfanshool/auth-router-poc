@@ -12,8 +12,7 @@ export default function LoginPage() {
   const { setAuth } = useAuth();
   const navigate = useNavigate();
 
-  const handleSubmit = (event: any) => {
-    event.preventDefault();
+  const handleSubmit = () => {
     if (username == 'admin' && password == 'admin') {
       setAuth('token', { id: '1', name: 'Anshul', email: 'anshu@sente.com' });
       navigate('/');
