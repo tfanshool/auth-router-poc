@@ -1,4 +1,5 @@
 import { ChevronRight, type LucideIcon } from 'lucide-react';
+import { useMemo } from 'react';
 
 import {
   Collapsible,
@@ -16,7 +17,8 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem
 } from '@/components/common/ui/sidebar';
-import { Link } from 'react-router';
+import { Link, useLocation } from 'react-router';
+import { cn } from '@/libs/utils/utils';
 
 export function NavMain({
   items
@@ -32,13 +34,21 @@ export function NavMain({
     }[];
   }[];
 }) {
+  const location = useLocation();
+  const currentPath = useMemo(() => location.pathname, [location.pathname]);
   return (
     <SidebarGroup>
       <SidebarGroupLabel>Menu</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item) => (
           <Collapsible key={item.title} asChild defaultOpen={item.isActive}>
-            <SidebarMenuItem>
+            <SidebarMenuItem
+              className={cn(
+                currentPath === item.url
+                  ? 'rounded bg-background text-primary shadow-inner hover:bg-muted'
+                  : ''
+              )}
+            >
               <SidebarMenuButton asChild tooltip={item.title}>
                 <Link to={item.url}>
                   <item.icon />

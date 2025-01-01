@@ -1,6 +1,4 @@
-import {
-  Alert,
-  AlertDescription} from '@/components/common/ui/alert';
+import { Alert, AlertDescription } from '@/components/common/ui/alert';
 import { Button } from '@/components/common/ui/button';
 import {
   Card,
@@ -141,7 +139,7 @@ const ScannerPlaygroundPage: React.FC = () => {
                     styles={{}}
                     components={{ audio: false, zoom: false }}
                     formats={['qr_code']}
-                    scanDelay={1000}
+                    scanDelay={0}
                     onScan={(result: IDetectedBarcode[]) =>
                       handleScan(result[0].rawValue)
                     }
