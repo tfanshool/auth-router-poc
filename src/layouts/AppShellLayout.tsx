@@ -2,6 +2,7 @@ import { TooltipProvider } from '@/components/common/ui/tooltip';
 import { Outlet } from 'react-router';
 import { ThemeProvider } from '@/components/common/theme-provider';
 import { cn } from '@/libs/utils/utils';
+import { Toaster } from '@/components/common/ui/sonner';
 const AppShellLayout: React.FC = () => {
   return (
     <main
@@ -10,6 +11,7 @@ const AppShellLayout: React.FC = () => {
       <TooltipProvider>
         <ThemeProvider>
           <Outlet />
+          <Toaster richColors theme='system' />
         </ThemeProvider>
       </TooltipProvider>
     </main>
